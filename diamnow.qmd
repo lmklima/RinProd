@@ -1,0 +1,20 @@
+---
+title: "Shine Bright Like a Diamond"
+format: html
+editor: visual
+execute:
+  echo: false
+---
+
+```{r}
+library(ggplot2)
+
+now <- format(Sys.time(), "%A, %Y-%m-%d -- %H:%M:%S %Z")
+
+message(paste0("Can you believe it's ", now, "?"))
+
+ggplot(diamonds, aes(x = carat, y = price)) +
+  geom_point(alpha = 0.2) +
+  labs(title = "Diamond Something Something") +
+  theme("minimal")
+```
